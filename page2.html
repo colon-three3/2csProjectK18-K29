@@ -1,1 +1,175 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Screams</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #bcbccf;
+            color: #000;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #5c5c69;
+            padding: 10px 20px;
+        }
+        .logo-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #4a4a57;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+            font-weight: bold;
+        }
+        .title {
+            font-size: 24px;
+            color: white;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .dropdown {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        .dropdown button {
+            background-color: #4a4a57;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            gap: 20px;
+        }
+        .section {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section .heading {
+            font-size: 36px;
+            text-align: center;
+        }
+        .section .subheading {
+            font-size: 18px;
+            text-align: left;
+        }
+        .section .content {
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #ddd;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            width: 100%;
+        }
+        .grid .box {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+            background-color: #ddd;
+        }
+        footer {
+            background-color: #5c5c69;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-title">
+            <div class="logo">Logo</div>
+            <div class="title"><a href="index.html">Silent Screams</a></div>
+        </div>
+        <nav class="nav">
+            <div class="dropdown">
+                <button>Illnesses</button>
+                <div class="dropdown-content">
+                    <a href="page1.html">Page 1</a>
+          <a href="page2.html">Page 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Sources</button>
+                <div class="dropdown-content">
+                    <a href="placesource.html">Source1</a>
+          <a href="placesource.html">Source2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button>Contact us</button>
+                <div class="dropdown-content">
+                    <a href="#">Copyrights Here</a>
+                    <a href="#">Sources</a>
+                    <a href="#">Socials</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="section">
+            <div class="heading">Illness</div>
+            <div class="subheading">Written by:</div>
+            <div class="content">Text</div>
+        </div>
+        <div class="grid">
+            <div class="box">Text</div>
+            <div class="box">Text</div>
+            <div class="box">Image</div>
+            <div class="box">Text</div>
+        </div>
+    </main>
+    <footer>
+        Footer Content Here
+    </footer>
+</body>
+</html>

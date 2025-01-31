@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d1d5db;
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #4b5563;
+      color: white;
+      padding: 10px 20px;
+      border-bottom: 4px solid black;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      background-color: #9ca3af;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .dropdown {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      color: black;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border: 1px solid #ccc;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Main Section */
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-areas:
+        "title title"
+        "written image"
+        "text-left images"
+        "text-bottom text-bottom";
+      gap: 40px;
+    }
+
+    h1 {
+      grid-area: title;
+      text-align: center;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: #f3f4f6;
+    }
+
+    .written-by {
+      grid-area: 1;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: #f3f4f6;
+    }
+
+    .main-image {
+      grid-area: image;
+      height: 200px;
+      background-color: #9ca3af;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+    }
+
+    .text-left {
+      grid-area: 2;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: #f3f4f6;
+    }
+
+    .images {
+      grid-area: 2;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .images .image {
+      flex: 1 1 calc(50% - 10px);
+      height: 100px;
+      background-color: #9ca3af;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid black;
+    }
+
+    .text-bottom {
+      grid-area: text-bottom;
+      border: 2px solid black;
+      padding: 10px;
+      background-color: #f3f4f6;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4b5563;
+      
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo"></div>
+    <div class="title">Website Title</div>
+    <nav>
+      <div class="dropdown">Illnesses
+        <div class="dropdown-content">
+          <a href="page1.html">Page 1</a>
+          <a href="page2.html">Page 2</a>
+        </div>
+      </div>
+      <div class="dropdown">Sources
+        <div class="dropdown-content">
+          <a href="placesource.html">Source1</a>
+          <a href="placesource.html">Source2</a>
+        </div>
+      </div>
+      <div class="dropdown">Contact us
+        <div class="dropdown-content">
+          <p>Copyrights Here</p>
+          <p>Sources</p>
+          <p>Socials</p>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h1>Lorem ipsum odor amet, consectetuer adipiscing elit.</h1>
+    <div class="written-by">Written by: <br> Lorem ipsum odor amet, <br> consectetuer adipiscing elit, 
+      <br> Massa class integer dapibus luctus aliquet, <br> eros sit.</div>
+    <div class="main-image">Image</div>
+    <div class="text-left">Text</div>
+    <div class="images">
+      <div class="image">Image</div>
+      <div class="image">Image</div>
+    </div>
+    <div class="text-bottom">Text</div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyrights Here</p>
+    <p>Sources</p>
+    <p>Socials</p>
+  </footer>
+</body>
+</html>
 
