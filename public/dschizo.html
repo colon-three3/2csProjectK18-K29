@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">  
+</head>
+<body style="background-color: #C5D3E8;">
+<div class="navbar">
+  <a href="socials.html"><i class="fa-solid fa-hashtag"></i> Socials</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa-solid fa-head-side-virus"></i> Illnesses
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="ehs.html"><i class="fa-solid fa-head-side-virus"></i> EHS</a>
+      <a href="ddd.html"><i class="fa-solid fa-head-side-virus"></i> DDD</a>
+      <a href="did.html"><i class="fa-solid fa-head-side-virus"></i> DID</a>
+      <a href="dschizo.html"><i class="fa-solid fa-head-side-virus"></i> Schizophrenia</a>
+      <a href="page5.html"><i class="fa-solid fa-head-side-virus"></i> Link 5</a>
+      <a href="external.html"><i class="fa-solid fa-wrench"></i> Testing</a>
+    </div>
+  </div>
+  <a id="home" href="index.html"><i class="fa-solid fa-house"></i> Silent Screams DRAFT</a>
+  
+</div>
+
+  <div id="jumpscare">
+    <img src="https://cdn.glitch.global/e2e82e8f-f27b-45f5-ba9c-de7039ef9d4e/smile___.jpg?v=1743846891202" alt="Jumpsare" width="100%" height="100%">
+  </div>
+  
+  <div id="schizoaudios">
+    <audio id="audio1" src="https://cdn.glitch.global/e2e82e8f-f27b-45f5-ba9c-de7039ef9d4e/schizoaudio1.mp3?v=1743901596234"></audio>
+    <audio id="audio2" src="https://cdn.glitch.global/e2e82e8f-f27b-45f5-ba9c-de7039ef9d4e/Schizoaudio2.mp3?v=1743901618888"></audio>
+  </div>
+  
+  <div id="schizo">
+    <div id="schizoTitle">
+       <h1>
+        Schizophrenia
+      </h1>
+      <h3>
+        Written by dr who
+      </h3>
+    </div>
+    
+    <div id="schizocontainer">
+      <div class="schizowords1">
+        <p>
+          Schizophrenia involves the disintegration of the relationship between thought, emotion, and behavior. It's a chronic mental disorder that a person's actions can even imply that they are out of touch with reality. Schizophrenia can be highly disturbing to both the person afflicted and those around them. Although researchers have yet to identify a definitive cause of schizophrenia, it is believed to be multifactorial, resulting from genetic malfunctions, brain chemistry complications, and environmental factors.
+        </p>
+      </div>
+      <div class="schizowords2">
+        <p>
+          Symptoms associated with schizophrenia are cognitive in nature. The presence of hallucinations and hearing voices are some of the of the more common symptoms associated with those diagnosed with schizophrenia. Negative symptoms reflect a decrease in ability. For example, lack of emotional responsiveness, lack of motivation, or social apathy represent negative symptoms. Finally, cognitive symptoms are associated with challenges in attention, memory, and difficulty making decisions.
+        </p>
+      </div>
+      <div class="schizowords3">
+        <p>
+          Schizophrenia manifests mostly in late adolescence or early adulthood, with approximately one percent of the population diagnosed worldwide. Symptoms are diagnosed through observation, and other comorbidities are ruled out through social screening and medical history. There is no direct blood test for diagnosis.
+        </p>
+        <p>
+         Schizophrenia is not curable but is controllable, and antipsychotics are the primary treatment course, with medications that stabilize symptoms and decrease severity. Other forms of control come from therapeutic measures, rehabilitation options, and social services.
+        </p>
+        
+      </div>
+    </div>
+    
+  </div>
+  
+  
+  
+ <script>
+  const flashBox = document.body;
+  let isOn = true;
+
+  setInterval(() => {
+    flashBox.style.backgroundColor = isOn ? '#7c8491' : '#b2bed1';
+    isOn = !isOn;
+  }, 500);
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const divs = [
+      document.querySelector('.schizowords1'),
+      document.querySelector('.schizowords2'),
+      document.querySelector('.schizowords3')
+    ];
+
+    function move() {
+      const padding = 50;
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      divs.forEach(div => {
+        const maxX = windowWidth - div.offsetWidth - padding;
+        const maxY = windowHeight - div.offsetHeight - padding;
+
+        const randomX = Math.floor(Math.random() * maxX);
+        const randomY = Math.floor(Math.random() * maxY);
+
+        div.style.left = `${randomX}px`;
+        div.style.top = `${randomY}px`;
+      });
+    }
+
+    setInterval(move, 5000);
+  });
+   
+   function triggerJumpscare() {
+    const jumpscare = document.getElementById('jumpscare');
+    jumpscare.style.display = 'block';
+    setTimeout(() => {
+      jumpscare.style.display = 'none';
+    }, 700);
+  }
+
+  function randomJumpscare() {
+    const randomTime = Math.floor(Math.random() * (15000 - 5000 + 1)) + 5000;
+    setTimeout(triggerJumpscare, randomTime); // 
+  }
+   
+    function shakeScreen() {
+      document.body.classList.add('shake');
+    }
+   
+  window.onload = () => {
+  randomJumpscare();
+  shakeScreen();
+};
+   
+  function playRandomAudio() {
+  const audios = [
+    document.getElementById('audio1'),
+    document.getElementById('audio2')
+  ];
+  const randomIndex = Math.floor(Math.random() * audios.length);
+  const selectedAudio = audios[randomIndex];
+  selectedAudio.load();
+  selectedAudio.play();
+}
+
+function loopRandomAudio() {
+  setInterval(() => {
+    playRandomAudio();
+  }, 4000);
+}
+
+window.addEventListener('click', () => {
+  playRandomAudio();
+  loopRandomAudio();
+}, { once: true });
+
+   
+</script>
+
+</body>
+  
+</html>

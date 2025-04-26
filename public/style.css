@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&family=Kaushan+Script&family=Lobster&family=Major+Mono+Display&family=Ranchers&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+
+.title {
+  background-color: #C5D3E8;
+}
+
+img.title {
+  z-index: -1;
+  position: absolute;
+}
+
+img#limg1  {
+  z-index: 1;
+  position: relative;
+  top: -250px;
+  float: right;
+  margin: 15px 15px 15px 15px;
+  
+}
+
+img#rimg1 {
+  float: right;
+  margin: 10px
+}
+
+p {
+  height: auto;
+  width: auto;
+  text-align: justify;
+}
+
+p#lpage1 {
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+  text-align: justify;
+}
+
+p#rpage1, p#rpage1b   {
+  height: auto;
+  width: 100%;
+  overflow: scroll;
+  text-align: justify;
+  position: relative;
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1px 80px;
+}
+
+.left {
+  flex: 30%;
+  background-color: #D2DAFF;
+  padding: 20px;
+}
+
+.right {
+  flex: 70%;
+  background-color: #AAC4FF;
+  padding: 20px;
+  padding-right: 10px;
+}
+
+.horizontal-scroll-wrapper{
+  display:block;
+  top:0;
+  left:0;
+  width:270px;
+  height:500px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  transform:rotate(-90deg) translateY(-80px);
+  transform-origin:right top;
+}
+.horizontal-scroll-wrapper > div{  
+  display:inline-flex;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg);
+  transform-origin: right top;
+  justify-content: center;
+}
+
+.squares > div{
+  width:250px;
+  height:250px;
+  margin:10px;
+}
+
+.rectangles{
+  top:100px;
+  padding:100px 0 0 0;
+}
+.rectangles > div{
+  width:140px;
+  height:60px;
+  margin:50px 10px;
+  padding:5px;
+  background:#cab;
+  transform:rotate(90deg) translateY(80px);
+  transform-origin: right top;
+}
+
+#didcontainer {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  
+}
+
+.didwords1 {
+  margin: 20px;
+  padding: 1px 5px;
+  width: 35%;
+  border: 1px solid black;
+  
+}
+#didleft {
+  width: 65%;
+  
+}
+.didwords2 {
+  margin: 20px;
+  padding: 1px 5px;
+  border: 1px solid black;
+  
+}
+.didwords3 {
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid black;
+  
+}
+
+
+#schizocontainer {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  transition: background-color 0.2s ease;
+}
+.schizowords1 {
+  margin: 20px;
+  padding: 1px 5px;
+  border: 1px solid black;
+  width: 25%;
+  background-color: #b6c3d6;
+  transition: left 0.2s ease, top 0.2s ease;
+  position: absolute;
+  left: 0;
+  top: 40;
+}
+.schizowords2 {
+  margin: 20px;
+  padding: 1px 5px;
+  border: 1px solid black;
+  width: 25%;
+  background-color: #b6c3d6;
+  transition: left 0.3s ease, top 0.3s ease;
+  position: absolute;
+  left: 400px;
+  top: 40;
+}
+.schizowords3 {
+  margin: 20px;
+  padding: 1px 5px;
+  border: 1px solid black;
+  width: 25%;
+  background-color: #b6c3d6;
+  transition: left 0.3s ease, top 0.3s ease;
+  position: absolute;
+  left: 800px;
+  top: 40;
+}
+
+
+#jumpscare {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+  display: none;
+}
+
+@keyframes shake {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(5px, -5px); }
+  50% { transform: translate(-5px, 5px); }
+  75% { transform: translate(5px, 5px); }
+  100% { transform: translate(0, 0); }
+}
+
+.shake {
+  animation: shake 0.2s infinite;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.surr {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+}
+
+.intro-text {
+  font-size: 30pt;
+  color: #eb3486;
+  animation-name: fontChange;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fontChange {
+  0% {
+    font-family: 'Major Mono Display', monospace;
+  }
+  20% {
+    font-family: 'Kaushan Script', cursive;
+  }
+  40% {
+    font-family: 'Lobster', cursive;
+  }
+  60% {
+    font-family: 'Ranchers', cursive;
+  }
+  80% {
+    font-family: 'Bitter', serif;
+  }
+  100% {
+    font-family: 'Major Mono Display', monospace;
+  }
+}
+
+iframe {
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #181C14;
+  width: 100%;
+  height: 55px;
+  z-index: -1;
+}
+
+footer {
+  z-index: 5;
+  width: 100%;
+  height: 15%;
+  background-color: #181C14;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  color: white;
+  }
+
+#freferences {
+  font-size: 10px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0;
+  padding: 5px 10px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+
+#freferences:hover {
+  background-color: #D0E8C5;
+  color: #333333;
+}
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #181C14;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  transition: 0.3s;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  background-color: #D0E8C5;
+}
+
+/* Add a background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #D0E8C5;
+  color: #333333;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #C1CFA1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#home {
+  float: left;
+}
+
+/* from external.html, snackbar */
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333333; /* Black background color */
+  color: #ffffff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 50px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 50px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 50px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 50px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 50px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">  
+</head>
+<body style="background-color: #C5D3E8;">
+<div class="navbar">
+  <a href="socials.html"><i class="fa-solid fa-hashtag"></i> Socials</a>
+  
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa-solid fa-head-side-virus"></i> Illnesses
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="ehs.html"><i class="fa-solid fa-head-side-virus"></i> EHS</a>
+      <a href="ddd.html"><i class="fa-solid fa-head-side-virus"></i> DDD</a>
+      <a href="did.html"><i class="fa-solid fa-head-side-virus"></i> DID</a>
+      <a href="dschizo.html"><i class="fa-solid fa-head-side-virus"></i> Schizophrenia</a>
+      <a href="page5.html"><i class="fa-solid fa-head-side-virus"></i> Link 5</a>
+      <a href="external.html"><i class="fa-solid fa-wrench"></i> Testing</a>
+    </div>
+  </div>
+  <a id="home" href="index.html"><i class="fa-solid fa-house"></i> Silent Screams DRAFT</a>
+</div>
+
+  
+  <div class="did">
+    <div id="didTitle">
+       <h1>
+        Dissociative identity disorder
+      </h1>
+    </div>
+    
+    <div id="didcontainer">
+      <div class="didwords1">
+      <p>
+        Dissociative identity disorder (DID), also known as multiple personality disorder or split personality disorder, is a mental health illness in which you have two or more distinct identities.
+      </p>
+      <p>
+        "Dissociate" is to separate or disconnect. People with dissociative identity disorder may experience many personas, known as alters and every identity may exhibit distinct expressions, memories, mental patterns, and behaviors. The identities may differ in terms of gender, ethnicity, and how they interact with their surroundings.
+      </p>
+      <p>
+        Your behavior may be influenced by these personalities at different times, but memories may not transfer between identities, resulting in amnesia (memory gaps).
+      </p>
+      <p>
+        It is typically a result of severe and prolonged childhood trauma. Unable to cope with the stress, the mind makes multiple alternate personalities as a defense mechanism. These personalities can take over a person’s consciousness at random times, often without their awareness.
+      </p>
+    </div>
+      
+      <div id="didleft">
+        
+        <div class="didwords2">
+        <p>
+          Possession: Identities appear as though your body were taken over by an external entity or spirit. Others may notice a change in the way you speak or behave. The personality change is involuntary, and the identity is undesirable.
+        </p>
+        </div>
+    
+        <div class="didwords3">
+        <p>
+          Nonpossession: People don't know as much about you. Instead of being in charge of your words, feelings, or actions, you may experience a rapid shift in how you identify yourself, as though you are watching yourself in a movie (an "out-of-body" experience).
+        </p>
+        </div>
+        
+        <div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  
+   
+   <div class="footer">
+    <footer>
+      <a id="freferences" href="#"> References for this page</a>
+    </footer>
+  </div>
+  
+  <script>
+    
+    
+    function swapBoxes() {
+  const container = document.getElementById('didcontainer');
+  const boxes = container.children;
+
+  // Swap the two boxes randomly
+  if (Math.random() > 0.5) {
+    container.insertBefore(boxes[1], boxes[0]);
+  } else {
+    container.insertBefore(boxes[0], boxes[1]);
+  }
+}
+
+setInterval(swapBoxes, 5000);
+
+function swapBoxes2() {
+  const container2 = document.getElementById('didleft');
+  const boxes2 = container2.children;
+
+  // Swap the two boxes randomly
+  if (Math.random() > 0.5) {
+    container2.insertBefore(boxes2[1], boxes2[0]);
+  } else {
+    container2.insertBefore(boxes2[0], boxes2[1]);
+  }
+}
+
+setInterval(swapBoxes2, 2000);
+
+    
+    
+    
+    //forda swipity swappity
+    
+    /* function changeMagic () {
+      const elements = [
+        ...document.querySelectorAll('.didwords1 p'),
+        ...document.querySelectorAll('.didwords2 p'),
+        ...document.querySelectorAll('.didwords3 p')
+      ];
+      
+      const divs = [
+      document.querySelector('.didwords1'),
+      document.querySelector('.didwords2'),
+      document.querySelector('.didwords3')
+    ];
+      
+       const bgcolors = ['#87d0fa', '#6ba7c9', '#5597bd', '#9db6c4', '#acd9e3'];
+    
+    elements.forEach(element=> {
+      const color =`#${Math.floor(Math.random() * 16777215).toString(16)}`;
+      element.style.color = color;
+      
+      const size = Math.random() * (24 - 16) + 16;
+      element.style.fontSize = `${size}px`;
+      
+      const weight = Math.random() > 0.5 ? 'bold' : 'normal';
+      element.style.fontWeight = weight;
+      
+       const randomX = Math.random() * 10 - 5;
+       const randomY = Math.random() * 10 - 5;
+      element.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+      
+       divs.forEach(div => {
+      const randomColor = bgcolors[Math.floor(Math.random() * bgcolors.length)];
+      div.style.backgroundColor = randomColor;
+    });
+  }
+    
+      
+      function swap1() {
+    const container = document.getElementById('didcontainer');
+    const boxes = container.children;
+
+    if (Math.random() > 0.5) {
+      container.insertBefore(boxes[1], boxes[0]);
+    } else {
+      container.insertBefore(boxes[0], boxes[1]);
+    }
+  }
+
+  function swap2() {
+    const container = document.getElementById('didleft');
+    const boxes2 = container.children;
+
+    if (Math.random() > 0.5) {
+      container.insertBefore(boxes2[1], boxes2[0]);
+    } else {
+      container.insertBefore(boxes2[0], boxes2[1]);
+    }
+  }
+
+  window.onload = function() {
+    changeMagic();
+    swap1();
+    swap2();
+  };
+
+     
+    
+     */
+    
+    
+</script>
+</body>
+  <div id="snackbar">You feel</div>
+</html>

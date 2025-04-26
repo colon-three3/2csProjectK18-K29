@@ -1,0 +1,24 @@
+{
+  "name": "hello-babel",
+  "version": "0.0.1",
+  "description": "A simple Node app built on Express using Babel",
+  "main": "dist/index.js",
+  "scripts": {
+    "build-babel": "babel -d ./dist ./src -s",
+    "start": "npm run build-babel && node ./dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-cli": "^6.26.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}
